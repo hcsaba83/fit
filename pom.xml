@@ -12,7 +12,7 @@
 	<groupId>com.myfitpage</groupId>
 	<artifactId>MyFitPage</artifactId>
 	<version>0.1</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>MyFitPage</name>
 	<description>MyFitPage</description>
 
