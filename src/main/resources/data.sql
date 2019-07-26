@@ -1,0 +1,18 @@
+insert into USERS (username, fullname, age, height, weight, gender) values ('jancsi01', 'Jancsika', 21, 188, 81, 'male')
+insert into USERS (username, fullname, age, height, weight, gender) values ('juliska69', 'Juliska', 18, 155, 55, 'female')
+
+insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Esti futás', 'futás', '2018-11-08 20:25:00.00', '2018-11-08 21:25:00.00', 867, 'jancsi01')
+insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Reggeli canga', 'kerékpározás', '2018-11-08 7:25:00.00', '2018-11-08 9:10:00.00', 1101, 'juliska69')
+
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-07', 1, 2, 3, 4, 5, 1, 2, 1, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-09', 2,5,5,4,5,1,4,0, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-10', 1,2,3,4,2,1,5,2, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-08', 1,2,1,4,1,4,4,4, 'jancsi01')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-11', 1, 2, 3, 4, 5, 1, 2, 1, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-12', 2,5,5,4,5,1,4,0, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-13', 1,2,3,4,2,1,5,2, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-11', 1,2,1,4,1,4,4,4, 'jancsi01')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-14', 1, 2, 3, 4, 5, 1, 2, 1, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-15', 2,5,5,4,5,1,4,0, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-16', 1,2,3,4,2,1,5,2, 'juliska69')
+insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-14', 1,2,1,4,1,4,4,4, 'jancsi01')

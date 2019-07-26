@@ -1,0 +1,31 @@
+Szia!
+
+<table width="60%" border="1">
+   		<tr>
+	        <td>Id</td>
+	        <td>Datum</td>
+	        <td>Kaja 1</td>
+	        <td>Kaja 2</td>
+	        <td>Kaja 3</td>
+	        <td>Kaja 4</td>
+	        <td>Kaja 5</td>
+	        <td>Nasi</td>
+	        <td>Viz</td>
+	        <td>Alkohol</td> 
+	    </tr>
+
+         	<tr th:each="food : ${food}"> 
+        	
+	        <td th:utext="${food.id}"></td>
+	        <td th:utext="${food.date}"></td>
+	        <td th:utext="${food.meal1}"></td>
+	        <td th:utext="${food.meal2}"></td>
+	        <td th:utext="${food.meal3}"></td>
+	        <td th:utext="${food.meal4}"></td>
+	        <td th:utext="${food.meal5}"></td>
+	        <td th:utext="${food.extrasnack}"></td>
+	        <td th:utext="${food.water}"></td>
+	        <td th:utext="${food.alcohol}"></td>
+
+        </tr>
+   </table>
