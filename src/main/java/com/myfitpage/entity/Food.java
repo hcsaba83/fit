@@ -17,14 +17,14 @@ public class Food {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private Date date;
-	private Short meal1;
-	private Short meal2;
-	private Short meal3;
-	private Short meal4;
-	private Short meal5;
-	private Short water;
-	private Short extrasnack;
-	private Short alcohol;
+	private Integer meal1;
+	private Integer meal2;
+	private Integer meal3;
+	private Integer meal4;
+	private Integer meal5;
+	private Integer water;
+	private Integer extrasnack;
+	private Integer alcohol;
 	@ManyToOne
 	private User user;
 	
@@ -32,8 +32,8 @@ public class Food {
 		super();
 	}
 
-	public Food(Long id, Date date, Short meal1, Short meal2, Short meal3, Short meal4, Short meal5, Short water,
-			Short extrasnack, Short alcohol, User user) {
+	public Food(Long id, Date date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
+			Integer extrasnack, Integer alcohol, User user) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -62,59 +62,99 @@ public class Food {
 		this.date = date;
 	}
 
-	public Short getMeal1() {
+	public Integer getMeal(Integer x) {
+		if(x == 1) 
+			return meal1;
+		if(x == 2) 
+			return meal2;
+		if(x == 3) 
+			return meal3;
+		if(x == 4) 
+			return meal4;
+		if(x == 5) 
+			return meal5;
+		if(x == 7) 
+			return water;
+		if(x == 6) 
+			return extrasnack;
+		if(x == 8)
+			return alcohol;
+		else return 0;
+
+	}
+	
+	public void setMeal(Integer meal, Integer x) {
+		if(x == 1) 
+			this.meal1 = meal;
+		if(x == 2) 
+			this.meal2 = meal;
+		if(x == 3) 
+			this.meal3 = meal;
+		if(x == 4) 
+			this.meal4 = meal;
+		if(x == 5) 
+			this.meal5 = meal;
+		if(x == 7) 
+			this.water = meal;
+		if(x == 6) 
+			this.extrasnack = meal;
+		if(x == 8)
+			this.alcohol = meal;
+	}
+	
+	public Integer getMeal1() {
 		return meal1;
 	}
-	public void setMeal1(Short meal1) {
+	public void setMeal1(Integer meal1) {
 		this.meal1 = meal1;
 	}
 
-	public Short getMeal2() {
+	public Integer getMeal2() {
 		return meal2;
 	}
-	public void setMeal2(Short meal2) {
+	public void setMeal2(Integer meal2) {
 		this.meal2 = meal2;
 	}
 
-	public Short getMeal3() {
+	public Integer getMeal3() {
 		return meal3;
 	}
-	public void setMeal3(Short meal3) {
+	public void setMeal3(Integer meal3) {
 		this.meal3 = meal3;
 	}
 
-	public Short getMeal4() {
+	public Integer getMeal4() {
 		return meal4;
 	}
-	public void setMeal4(Short meal4) {
+	public void setMeal4(Integer meal4) {
 		this.meal4 = meal4;
 	}
 
-	public Short getMeal5() {
+	public Integer getMeal5() {
 		return meal5;
 	}
-	public void setMeal5(Short meal5) {
+	public void setMeal5(Integer meal5) {
 		this.meal5 = meal5;
 	}
 
-	public Short getWater() {
+	public Integer getWater() {
 		return water;
 	}
-	public void setWater(Short water) {
+	public void setWater(Integer water) {
 		this.water = water;
 	}
 
-	public Short getExtrasnack() {
+	public Integer getExtrasnack() {
 		return extrasnack;
 	}
-	public void setExtrasnack(Short extrasnack) {
+	public void setExtrasnack(Integer extrasnack) {
 		this.extrasnack = extrasnack;
 	}
 
-	public Short getAlcohol() {
+	public Integer getAlcohol() {
 		return alcohol;
 	}
-	public void setAlcohol(Short alcohol) {
+	public void setAlcohol(Integer alcohol) {
 		this.alcohol = alcohol;
 	}
 
