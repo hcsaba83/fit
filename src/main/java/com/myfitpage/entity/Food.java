@@ -32,10 +32,9 @@ public class Food {
 		super();
 	}
 
-	public Food(Long id, Date date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
+	public Food(Date date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
 			Integer extrasnack, Integer alcohol, User user) {
 		super();
-		this.id = id;
 		this.date = date;
 		this.meal1 = meal1;
 		this.meal2 = meal2;

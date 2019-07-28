@@ -18,14 +18,12 @@ public class FoodService {
 		this.foodRepository = foodRepository;
 	}
 
-
 	public List<Food> getAll() {
 		return foodRepository.findAll();
 	}
 
 	public Food getById(Long id)  {
 		return foodRepository.findOne(id);
-		
 	}
 
 	public void action(Long id, Integer no) {
