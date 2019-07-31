@@ -1,5 +1,12 @@
-insert into USERS (username, fullname, age, height, weight, gender) values ('jancsi01', 'Jancsika', 21, 188, 81, 'male')
-insert into USERS (username, fullname, age, height, weight, gender) values ('juliska69', 'Juliska', 18, 155, 55, 'female')
+insert into USERS (username, password, fullname, age, height, weight, gender) values ('jancsi01', '11111', 'Jancsika', 21, 188, 81, 'male')
+insert into USERS (username, password, fullname, age, height, weight, gender) values ('juliska69', '$2a$10$QnmmbkpScGnyAw4vh4k02uTdghKt.lxbayGvvrwqpOXf.HtAoMxie', 'Juliska', 18, 155, 55, 'female')
+
+insert into ROLES (role) values ('USER')
+insert into ROLES (role) values ('EDITOR')
+insert into ROLES (role) values ('ADMIN')
+
+insert into users_roles (user_id, role_id) values ('jancsi01',1)
+insert into users_roles (user_id, role_id) values ('juliska69',1)
 
 insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Esti futás', 'futás', '2018-11-08 20:25:00.00', '2018-11-08 21:25:00.00', 867, 'jancsi01')
 insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Reggeli canga', 'kerékpározás', '2018-11-08 7:25:00.00', '2018-11-08 9:10:00.00', 1101, 'juliska69')

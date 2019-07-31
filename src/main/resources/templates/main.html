@@ -44,7 +44,7 @@
 	        <td><a class="btn btn-warning btn-xs" th:text="${food.extrasnack}" th:href="@{'/action/' + ${food.id}+'/'+6}"/></td>
 	        <td><a class="btn btn-primary btn-xs" th:text="${food.water}" th:href="@{'/action/' + ${food.id}+'/'+7}"/></td>
 	        <td><a class="btn btn-danger btn-xs" th:text="${food.alcohol}" th:href="@{'/action/' + ${food.id}+'/'+8}"/></td>
-	        <td th:utext="${food.user.username}"></td>
+	        <td th:utext="${food.user.fullname}"></td>
 
         </tr>
    </table>

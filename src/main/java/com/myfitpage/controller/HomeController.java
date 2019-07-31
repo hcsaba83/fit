@@ -48,11 +48,11 @@ public class HomeController {
 		return("redirect:/");
 	}
 	
-	@Scheduled(fixedRate = 20000)
+	@Scheduled(fixedRate = 200000)
 	public void createNew() {
 		Food food = new Food(new Date(),0,0,0,0,0,0,0,0, userRepository.findOne("jancsi01"));
 		foodRepository.save(food);
-		System.out.println("valami");
+		System.out.println("Scheduled Task");
 	}
 
 }
