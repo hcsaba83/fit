@@ -1,15 +1,13 @@
-insert into USERS (username, password, fullname, age, height, weight, gender) values ('jancsi01', '11111', 'Jancsika', 21, 188, 81, 'male')
-insert into USERS (username, password, fullname, age, height, weight, gender) values ('juliska69', '$2a$10$QnmmbkpScGnyAw4vh4k02uTdghKt.lxbayGvvrwqpOXf.HtAoMxie', 'Juliska', 18, 155, 55, 'female')
+insert into USERS (username, password, fullname, age, height, weight, gender) values ('jancsi01', '$2a$10$p.FgEmgkWDfRidVuqLat2uTmRhH7do8zjeK2Eg8MzJT1EoUnYX166', 'Jancsika', 21, 188, 81, 'male')
+insert into USERS (username, password, fullname, age, height, weight, gender) values ('juliska69', '$2a$10$p.FgEmgkWDfRidVuqLat2uTmRhH7do8zjeK2Eg8MzJT1EoUnYX166', 'Juliska', 18, 155, 55, 'female')
+insert into USERS (username, password, fullname, age, height, weight, gender) values ('hcsaba83', '$2a$10$p.FgEmgkWDfRidVuqLat2uTmRhH7do8zjeK2Eg8MzJT1EoUnYX166', 'Csabi', 36, 168, 70, 'male')
 
 insert into ROLES (role) values ('USER')
 insert into ROLES (role) values ('EDITOR')
 insert into ROLES (role) values ('ADMIN')
 
-insert into users_roles (user_id, role_id) values ('jancsi01',1)
+insert into users_roles (user_id, role_id) values ('jancsi01',2)
 insert into users_roles (user_id, role_id) values ('juliska69',1)
-
-insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Esti futás', 'futás', '2018-11-08 20:25:00.00', '2018-11-08 21:25:00.00', 867, 'jancsi01')
-insert into ACTIVITIES (title, type, start, end, kcal, user_username) values ('Reggeli canga', 'kerékpározás', '2018-11-08 7:25:00.00', '2018-11-08 9:10:00.00', 1101, 'juliska69')
 
 insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-07', 1, 2, 3, 4, 5, 1, 2, 1, 'juliska69')
 insert into FOODS (date, meal1, meal2, meal3, meal4, meal5, water, extrasnack, alcohol, user_username) values ('2018-11-09', 2,5,5,4,5,1,4,0, 'juliska69')

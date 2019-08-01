@@ -26,8 +26,8 @@ public class User {
 	private Integer height;
 	private Integer weight;
 	private String gender;
-	@OneToMany(mappedBy = "user")
-	private List<Activity> activites;
+	//@OneToMany(mappedBy = "user")
+	//private List<Activity> activites;
 	@OneToMany(mappedBy = "user")
 	private List<Food> foods;
 	@ManyToMany (cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
@@ -44,7 +44,7 @@ public class User {
 	
 
 	public User(String username, String password, String fullname, Integer age, Integer height, Integer weight, String gender,
-			List<Activity> activites, List<Food> foods,  Set<Role> roles) {
+			List<Food> foods,  Set<Role> roles) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -53,7 +53,7 @@ public class User {
 		this.height = height;
 		this.weight = weight;
 		this.gender = gender;
-		this.activites = activites;
+		//this.activites = activites;
 		this.foods = foods;
 		this.roles = roles;
 	}
@@ -122,14 +122,14 @@ public class User {
 		this.foods = foods;
 	}
 
-	public List<Activity> getActivites() {
-		return activites;
-	}
-
-	public void setActivites(List<Activity> activites) {
-		this.activites = activites;
-	}
-	
+//	public List<Activity> getActivites() {
+//		return activites;
+//	}
+//
+//	public void setActivites(List<Activity> activites) {
+//		this.activites = activites;
+//	}
+//	
 	
 	
 }

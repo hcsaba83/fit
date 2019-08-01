@@ -39,9 +39,10 @@ public class UserDetailsImpl implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		BCryptPasswordEncoder encoder = passwordEncoder();
-		System.out.println("UserDetailsImpl-ben kódolt jelszó: "+encoder.encode(user.getPassword()));
-		return encoder.encode(user.getPassword());
+		//BCryptPasswordEncoder encoder = passwordEncoder();
+		//System.out.println("UserDetailsImpl-ben kódolt jelszó: "+encoder.encode(user.getPassword()));
+		//return encoder.encode(user.getPassword());
+		return user.getPassword();
 	}
 
 	@Override

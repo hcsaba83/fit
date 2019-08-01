@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="activities")
+//@Entity
+@Table(name="activs")
 public class Activity {
 	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

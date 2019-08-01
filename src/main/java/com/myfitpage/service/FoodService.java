@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import com.myfitpage.entity.Food;
+import com.myfitpage.entity.User;
 import com.myfitpage.repository.FoodRepository;
 
 @Service
@@ -20,6 +21,10 @@ public class FoodService {
 
 	public List<Food> getAll() {
 		return foodRepository.findAll();
+	}
+	
+	public List<Food> getAllByUser(User user) {
+		return foodRepository.findAllByUser(user);
 	}
 
 	public Food getById(Long id)  {
