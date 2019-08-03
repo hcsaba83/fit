@@ -1,7 +1,6 @@
 package com.myfitpage.entity;
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +15,7 @@ public class Food {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private Date date;
+	private LocalDate date;
 	private Integer meal1;
 	private Integer meal2;
 	private Integer meal3;
@@ -32,7 +31,7 @@ public class Food {
 		super();
 	}
 
-	public Food(Date date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
+	public Food(LocalDate date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
 			Integer extrasnack, Integer alcohol, User user) {
 		super();
 		this.date = date;
@@ -54,10 +53,10 @@ public class Food {
 		this.id = id;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
-	public void setDate(Date String) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

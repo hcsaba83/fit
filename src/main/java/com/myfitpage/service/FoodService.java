@@ -1,5 +1,6 @@
 package com.myfitpage.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +26,12 @@ public class FoodService {
 	
 	public List<Food> getAllByUser(User user) {
 		return foodRepository.findAllByUser(user);
+	}
+	
+	public List<Food> getAllByUserByDate(User user, LocalDate date) {
+		System.out.println(user+"  "+date);
+		System.out.println(foodRepository.findAllByUserByDate(user, date));
+		return foodRepository.findAllByUserByDate(user, date);
 	}
 
 	public Food getById(Long id)  {

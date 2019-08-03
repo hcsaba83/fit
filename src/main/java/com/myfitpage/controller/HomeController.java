@@ -1,5 +1,6 @@
 package com.myfitpage.controller;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,13 +58,15 @@ public class HomeController {
 		return("redirect:/");
 	}
 	
-	//@Scheduled(fixedRate = 20000)
+	//@Scheduled(fixedRate = 5000)
 	@Scheduled(cron = "0 1 0 * * *")
 		public void createNew() {
 		for (final User user : userRepository.findAll()) {
-			Food food = new Food(new Date(),0,0,0,0,0,0,0,0, userRepository.findOne(user.getUsername()));
-			foodRepository.save(food);
-			System.out.println("Scheduled Task: Új nap hozzáadva. -> " + user.getUsername());
+			if (foodService.getAllByUserByDate(user, LocalDate.now()).isEmpty()) {
+				Food food = new Food(LocalDate.now(),0,0,0,0,0,0,0,0, userRepository.findOne(user.getUsername()));
+				foodRepository.save(food);
+				System.out.println("Scheduled Task: Új nap hozzáadva. -> " + user.getUsername());
+			}
 		}
 	}
 	
