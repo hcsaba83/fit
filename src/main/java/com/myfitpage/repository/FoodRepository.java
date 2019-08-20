@@ -22,8 +22,11 @@ public interface FoodRepository extends CrudRepository<Food, Long> {
 
 	List<Food> findAllByUser(User user);
 	
-	@Query(value="SELECT * FROM foods where user_username IN (select :username from users where date = :date)", nativeQuery = true)
+	@Query(value="SELECT f FROM Food f where user_username = :username AND date = :date")
 	List<Food> findAllByUserByDate(@Param("username") User user, @Param("date")  LocalDate date);
+	
+	@Query(value="SELECT f FROM Food f where user_username = :username ORDER BY f.date DESC")
+	List<Food> findAllByUserDesc(@Param("username") User user);
 
 	
 }

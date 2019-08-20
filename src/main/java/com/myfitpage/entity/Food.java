@@ -22,6 +22,7 @@ public class Food {
 	private Integer meal4;
 	private Integer meal5;
 	private Integer water;
+	private Integer coffee;
 	private Integer extrasnack;
 	private Integer alcohol;
 	@ManyToOne
@@ -31,7 +32,7 @@ public class Food {
 		super();
 	}
 
-	public Food(LocalDate date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water,
+	public Food(LocalDate date, Integer meal1, Integer meal2, Integer meal3, Integer meal4, Integer meal5, Integer water, Integer coffee,
 			Integer extrasnack, Integer alcohol, User user) {
 		super();
 		this.date = date;
@@ -41,6 +42,7 @@ public class Food {
 		this.meal4 = meal4;
 		this.meal5 = meal5;
 		this.water = water;
+		this.coffee = coffee;
 		this.extrasnack = extrasnack;
 		this.alcohol = alcohol;
 		this.user = user;
@@ -71,11 +73,13 @@ public class Food {
 			return meal4;
 		if(x == 5) 
 			return meal5;
-		if(x == 7) 
-			return water;
 		if(x == 6) 
 			return extrasnack;
-		if(x == 8)
+		if(x == 7) 
+			return water;
+		if(x == 8) 
+			return coffee;
+		if(x == 9)
 			return alcohol;
 		else return 0;
 
@@ -92,11 +96,13 @@ public class Food {
 			this.meal4 = meal;
 		if(x == 5) 
 			this.meal5 = meal;
-		if(x == 7) 
-			this.water = meal;
 		if(x == 6) 
 			this.extrasnack = meal;
-		if(x == 8)
+		if(x == 7) 
+			this.water = meal;
+		if(x == 8) 
+			this.coffee = meal;
+		if(x == 9)
 			this.alcohol = meal;
 	}
 	
@@ -140,6 +146,13 @@ public class Food {
 	}
 	public void setWater(Integer water) {
 		this.water = water;
+	}
+	
+	public Integer getCoffee() {
+		return coffee;
+	}
+	public void setCoffee(Integer coffee) {
+		this.water = coffee;
 	}
 
 	public Integer getExtrasnack() {

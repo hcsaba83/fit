@@ -29,9 +29,11 @@ public class FoodService {
 	}
 	
 	public List<Food> getAllByUserByDate(User user, LocalDate date) {
-		System.out.println(user+"  "+date);
-		System.out.println(foodRepository.findAllByUserByDate(user, date));
 		return foodRepository.findAllByUserByDate(user, date);
+	}
+	
+	public List<Food> getAllByUserDesc(User user) {
+		return foodRepository.findAllByUserDesc(user);
 	}
 
 	public Food getById(Long id)  {

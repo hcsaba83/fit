@@ -48,7 +48,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String main(Model model) {
-		model.addAttribute("food", foodService.getAllByUser(userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName())));
+		model.addAttribute("food", foodService.getAllByUserDesc(userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName())));
 		return "main";
 	}
 	
@@ -63,7 +63,7 @@ public class HomeController {
 		public void createNew() {
 		for (final User user : userRepository.findAll()) {
 			if (foodService.getAllByUserByDate(user, LocalDate.now()).isEmpty()) {
-				Food food = new Food(LocalDate.now(),0,0,0,0,0,0,0,0, userRepository.findOne(user.getUsername()));
+				Food food = new Food(LocalDate.now(),0,0,0,0,0,0,0,0,0, userRepository.findOne(user.getUsername()));
 				foodRepository.save(food);
 				System.out.println("Scheduled Task: Új nap hozzáadva. -> " + user.getUsername());
 			}
